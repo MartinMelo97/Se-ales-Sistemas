@@ -17,3 +17,8 @@ Vo1 = -R1*vi;
 plot(t1, Vo1, 'bo')
 
 %Inciso C
+% A partir de la gráfica podemos deducir que el sistema no es invariante
+% con el tiempo
+%Esto debido a que, al introducir la entrada con el retraso (50 mseg), la
+%salida debió haberse recorrido 50 mseg, pero en cabo, en la gráfica no se
+%desplazó, únicamente se hizo 0 lo anterior a t < 50 mseg
