@@ -1,0 +1,33 @@
+t = -50:0.001:50;
+x = t;
+ for n = 1:length(x)
+     if(x(n) < -10)
+         y(n) = -1000;
+     elseif (x(n) > 10)
+         y(n) = 1000;
+     else
+        y(n) = 100*x(n);
+     end
+ end
+ 
+ %subplot(2,1,1)
+ plot(x,y), hold on
+ ylim([-1200 1200])
+ xlim([-50 50])
+ 
+x1 = 2*t;
+ for n = 1:length(t)
+     if(x1(n) < -10)
+         y1(n) = -1000;
+     elseif (x1(n) > 10)
+         y1(n) = 1000;
+     else
+        y1(n) = 100*x1(n);
+     end
+ end
+ 
+ %subplot(2,1,2)
+ plot(x1,y1)
+ ylim([-1200 1200])
+ xlim([-50 50])
+ 
