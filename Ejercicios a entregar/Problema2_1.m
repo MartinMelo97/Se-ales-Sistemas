@@ -17,6 +17,7 @@ Vo1 = -R1*vi;
 plot(t1, Vo1, 'bo')
 
 %Inciso C
+
 % A partir de la gráfica podemos deducir que el sistema no es invariante
 % con el tiempo
 %Esto debido a que, al introducir la entrada con el retraso (50 mseg), la
