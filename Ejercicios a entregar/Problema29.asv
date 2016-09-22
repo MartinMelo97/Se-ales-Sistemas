@@ -1,0 +1,73 @@
+%Problema 2.9
+
+%Inciso a), tomando x(t) = u(t)
+t = -2:0.001:8;
+y = cos(pi*t);
+for n = (1:length(y))
+    if(t(n) < 0)
+        y(n) = 0;
+    end
+    if(y(n) < 0)
+        y(n) = 0;
+    end
+end
+
+subplot(2, 1, 1)
+plot(t, y, 'r*'), hold on
+title('x(t) = u(t) -> y(t) = x(t)*cos(pi*t)')
+
+%Inciso a), tomando x(t) = u(t-1)
+y1 = cos(pi*t);
+for n = (1:length(y))
+    if(t(n) < 1)
+        y1(n) = 0;
+    end
+    if(y1(n) < 0)
+        y1(n) = 0;
+    end
+end
+
+subplot(2, 1, 2)
+plot(t, y1,'b*')
+title('x(t) = u(t-1) -> y(t) = x(t)*cos(pi*t)')
+
+%Inciso b), tomando x(t) = u(t)
+ya = ones(1,length(t));
+yb = -1*(ones(1,length(t)));
+
+for i = 1:length(t)
+    if(t(i) < 0)
+        ya(i) = 0;
+    end
+    if (t(i) < 1)
+        yb(i) = 0;
+    end
+end
+yc = ya+yb;
+figure
+subplot(2, 1, 1)
+plot(t,yc,'bo')
+title('x(t) = u(t) -> y(t) = x(t)[u(t) - u(t-2)]')
+
+%Inciso b), tomando x(t) = u(t-1)
+ya1 = ones(1,length(t));
+yb1 = -1*(ones(1,length(t)));
+
+for j = 1:length(t)
+    if(t(j) < 1)
+        ya1(j) = 0;
+    end
+    if(t(j) < 2)
+        yb1(j) = 0;
+    end
+end
+yc1 = ya1 + yb1;
+subplot(2,1,2)
+plot(t,yc1,'g-')
+title('x(t) = u(t-1) -> y(t) = x(t)[u(t) - u(t-2)]')
+
+
+
+
+
+
